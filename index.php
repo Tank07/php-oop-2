@@ -31,12 +31,26 @@ if ($cardexp > 2022){
   echo "<p class='order_card'> La sua carta è scaduta o non è stata ancora inserita </p>";
 }
 
+function cardValidation($cardexp) {
+  if ($cardexp < 2022) {
+  throw new Exception('La sua carta è scaduta o non è stata ancora inserita');
+  }
+  return $cardexp;
+ }
+
+ try {
+  echo cardValidation('La sua carta è stata accettata per l\'acquisto');
+  } catch (Exception $e) {
+  echo 'Eccezione: ' . $e->getMessage();
+  }
+
 class Cibo
 {
   public $articolo;
   public $price;
   public $peso;
   public $scadenza;
+  public $cardexp;
 
   //Costruttore
   public function __construct($_articolo, $_price, $_peso, $_scadenza ){
@@ -86,19 +100,6 @@ class Cibo
   }
 
   //Exception
-
-  // function cardValidation($cardexp) {
-  //   if ($cardexp < 2022) {
-  //   throw new Exception('La sua carta è scaduta o non è stata ancora inserita');
-  //   }
-  //   return $cardexp;
-  //  }
-
-  //  try {
-  //   echo cardValidation('ciao');
-  //   } catch (Exception $e) {
-  //   echo 'Eccezione: ' . $e->getMessage();
-  //   }
 
 }
 
