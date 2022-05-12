@@ -34,21 +34,23 @@ class Giochi extends Cucce {
 
 $palla = new Giochi ('Palla da tennis large con suono', '7', 400 , 10, 10 , 'Verde fluo' );
 
-echo "<h4 class='giochi'> Nome articolo: " . $palla -> getArticolo() . "</h4>";
-echo "<p class='giochi'> Prezzo articolo: " . $palla -> getPrice() . "gr</p>";
-echo "<p class='giochi'> Peso articolo: " . $palla -> getPeso() . "€</p>";
-echo "<p class='giochi'> Lunghezza articolo: " . $palla -> getLunghezza() . "cm</p>";
-echo "<p class='giochi'> Larghezza articolo: " . $palla -> getLarghezza() . "cm</p>";
-echo "<p class='giochi'> Colore articolo: " . $palla -> getColore() . "</p>";
+echo "<h2 class='giochi'> Categoria Giochi: </h2>";
+
+echo "<h4 class='giochi'> Nome articolo - " . $palla -> getArticolo() . "</h4>";
+echo "<p class='giochi'> Prezzo articolo - " . $palla -> getPrice() . "gr</p>";
+echo "<p class='giochi'> Peso articolo - " . $palla -> getPeso() . "€</p>";
+echo "<p class='giochi'> Lunghezza articolo - " . $palla -> getLunghezza() . "cm</p>";
+echo "<p class='giochi'> Larghezza articolo - " . $palla -> getLarghezza() . "cm</p>";
+echo "<p class='giochi'> Colore articolo - " . $palla -> getColore() . "</p>";
 
 $bastone = new giochi ('Bastone in gomma', '4', 200 , 50 , 5, 'Marrone' );
 
-echo "<h4 class='giochi'> Nome articolo: " . $bastone -> getArticolo() . "</h4>";
-echo "<p class='giochi'> Prezzo articolo: " . $bastone -> getPrice() . "gr</p>";
-echo "<p class='giochi'> Peso articolo: " . $bastone -> getPeso() . "€</p>";
-echo "<p class='giochi'> Lunghezza articolo: " . $bastone -> getLunghezza() . "cm</p>";
-echo "<p class='giochi'> Larghezza articolo: " . $bastone -> getLarghezza() . "cm</p>";
-echo "<p class='giochi'> Colore articolo: " . $bastone -> getColore() . "</p>";
+echo "<h4 class='giochi'> Nome articolo - " . $bastone -> getArticolo() . "</h4>";
+echo "<p class='giochi'> Prezzo articolo - " . $bastone -> getPrice() . "gr</p>";
+echo "<p class='giochi'> Peso articolo - " . $bastone -> getPeso() . "€</p>";
+echo "<p class='giochi'> Lunghezza articolo - " . $bastone -> getLunghezza() . "cm</p>";
+echo "<p class='giochi'> Larghezza articolo - " . $bastone -> getLarghezza() . "cm</p>";
+echo "<p class='giochi'> Colore articolo - " . $bastone -> getColore() . "</p>";
 
 ?>
 
@@ -61,7 +63,7 @@ echo "<p class='giochi'> Colore articolo: " . $bastone -> getColore() . "</p>";
     <title>OOP-2</title>
     <style>
         .giochi{
-            color:blue;
+            color: blue;
         }
     </style>
 </head>

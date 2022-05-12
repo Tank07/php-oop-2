@@ -51,21 +51,23 @@ class Cucce extends Cibo {
 
 $castle = new Cucce ('Castle', '10', 500, 400, 400, 600 );
 
-echo "<h4 class='cucce'> Nome articolo: " . $castle -> getArticolo() . "</h4>";
-echo "<p class='cucce'> Prezzo articolo: " . $castle -> getPrice() . "kg</p>";
-echo "<p class='cucce'> Peso articolo: " . $castle -> getPeso() . "€</p>";
-echo "<p class='cucce'> Lunghezza articolo: " . $castle -> getLunghezza() . "cm</p>";
-echo "<p class='cucce'> Larghezza articolo: " . $castle -> getLarghezza() . "cm</p>";
-echo "<p class='cucce'> Altezza articolo: " . $castle -> getAltezza() . "cm</p>";
+echo "<h2 class='cucce'> Categoria Cucce: </h2>";
+
+echo "<h4 class='cucce'> Nome articolo - " . $castle -> getArticolo() . "</h4>";
+echo "<p class='cucce'> Prezzo articolo - " . $castle -> getPrice() . "kg</p>";
+echo "<p class='cucce'> Peso articolo - " . $castle -> getPeso() . "€</p>";
+echo "<p class='cucce'> Lunghezza articolo - " . $castle -> getLunghezza() . "cm</p>";
+echo "<p class='cucce'> Larghezza articolo - " . $castle -> getLarghezza() . "cm</p>";
+echo "<p class='cucce'> Altezza articolo - " . $castle -> getAltezza() . "cm</p>";
 
 $capsule = new Cucce ('capsule', '3', 30 , 150, 60, 70 );
 
-echo "<h4 class='cucce'> Nome articolo: " . $capsule -> getArticolo() . "</h4>";
-echo "<p class='cucce'> Prezzo articolo: " . $capsule -> getPrice() . "kg</p>";
-echo "<p class='cucce'> Peso articolo: " . $capsule -> getPeso() . "€</p>";
-echo "<p class='cucce'> Lunghezza articolo: " . $capsule -> getLunghezza() . "cm</p>";
-echo "<p class='cucce'> Larghezza articolo: " . $capsule -> getLarghezza() . "cm</p>";
-echo "<p class='cucce'> Altezza articolo: " . $capsule -> getAltezza() . "cm</p>";
+echo "<h4 class='cucce'> Nome articolo - " . $capsule -> getArticolo() . "</h4>";
+echo "<p class='cucce'> Prezzo articolo - " . $capsule -> getPrice() . "kg</p>";
+echo "<p class='cucce'> Peso articolo - " . $capsule -> getPeso() . "€</p>";
+echo "<p class='cucce'> Lunghezza articolo - " . $capsule -> getLunghezza() . "cm</p>";
+echo "<p class='cucce'> Larghezza articolo - " . $capsule -> getLarghezza() . "cm</p>";
+echo "<p class='cucce'> Altezza articolo - " . $capsule -> getAltezza() . "cm</p>";
 
 
 ?>

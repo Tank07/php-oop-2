@@ -85,22 +85,39 @@ class Cibo
     return $this -> scadenza;
   }
 
+  //Exception
+
+  // function cardValidation($cardexp) {
+  //   if ($cardexp < 2022) {
+  //   throw new Exception('La sua carta è scaduta o non è stata ancora inserita');
+  //   }
+  //   return $cardexp;
+  //  }
+
+  //  try {
+  //   echo cardValidation('ciao');
+  //   } catch (Exception $e) {
+  //   echo 'Eccezione: ' . $e->getMessage();
+  //   }
+
 }
 
 //istanziamo
 $croccantini = new Cibo( 'Croccantini Digestive', 35 , 10000 , 2024 );
 
-echo "<h4> Nome articolo: " . $croccantini -> getArticolo() . "</h4>";
-echo "<p> Prezzo articolo: " . $croccantini -> getPrice() . "€</p>";
-echo "<p> Peso articolo: " . $croccantini -> getPeso() . " gr.</p>";
-echo "<p> Scadenza articolo: " . $croccantini -> getScadenza() . "</p>";
+echo "<h2> Categoria Cibo: </h2>";
+
+echo "<h4> Nome articolo - " . $croccantini -> getArticolo() . "</h4>";
+echo "<p> Prezzo articolo - " . $croccantini -> getPrice() . "€</p>";
+echo "<p> Peso articolo - " . $croccantini -> getPeso() . " gr.</p>";
+echo "<p> Scadenza articolo - " . $croccantini -> getScadenza() . "</p>";
 
 $dentastix = new Cibo( 'Dentastix Hills', 5 , 20 , 2023 );
 
-echo "<h4> Nome articolo: " . $dentastix -> getArticolo() . "</h4>";
-echo "<p> Prezzo articolo: " . $dentastix -> getPrice() . "€</p>";
-echo "<p> Peso articolo: " . $dentastix -> getPeso() . "gr.</p>";
-echo "<p> Scadenza articolo: " . $dentastix -> getScadenza() . "</p>";
+echo "<h4> Nome articolo - " . $dentastix -> getArticolo() . "</h4>";
+echo "<p> Prezzo articolo - " . $dentastix -> getPrice() . "€</p>";
+echo "<p> Peso articolo - " . $dentastix -> getPeso() . "gr.</p>";
+echo "<p> Scadenza articolo - " . $dentastix -> getScadenza() . "</p>";
 
 ?>
 
