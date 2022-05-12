@@ -21,15 +21,11 @@ class Giochi extends Cucce {
   }
 
   public function setColore($_colore){
-    //Possibile validazione dei dati
     $this -> colore = $_colore;
     return $this;
   }
 
-
-   //Getter $larghezza
    public function getColore(){
-    //Possibile validazione dei dati
     return $this -> colore;
   }
 
@@ -38,26 +34,21 @@ class Giochi extends Cucce {
 
 $palla = new Giochi ('Palla da tennis large con suono', '7', 400 , 10, 10 , 'Verde fluo' );
 
-// var_dump($palla);
-
-echo "<p class='giochi'> Nome articolo: " . $palla -> getArticolo() . "</p>";
+echo "<h4 class='giochi'> Nome articolo: " . $palla -> getArticolo() . "</h4>";
 echo "<p class='giochi'> Prezzo articolo: " . $palla -> getPrice() . "gr</p>";
 echo "<p class='giochi'> Peso articolo: " . $palla -> getPeso() . "€</p>";
 echo "<p class='giochi'> Lunghezza articolo: " . $palla -> getLunghezza() . "cm</p>";
 echo "<p class='giochi'> Larghezza articolo: " . $palla -> getLarghezza() . "cm</p>";
-echo "<p class='giochi'> Colore articolo: " . $palla -> getColore() . "cm</p>";
+echo "<p class='giochi'> Colore articolo: " . $palla -> getColore() . "</p>";
 
 $bastone = new giochi ('Bastone in gomma', '4', 200 , 50 , 5, 'Marrone' );
 
-// var_dump($bastone);
-
-echo "<p class='giochi'> Nome articolo: " . $bastone -> getArticolo() . "</p>";
+echo "<h4 class='giochi'> Nome articolo: " . $bastone -> getArticolo() . "</h4>";
 echo "<p class='giochi'> Prezzo articolo: " . $bastone -> getPrice() . "gr</p>";
 echo "<p class='giochi'> Peso articolo: " . $bastone -> getPeso() . "€</p>";
 echo "<p class='giochi'> Lunghezza articolo: " . $bastone -> getLunghezza() . "cm</p>";
 echo "<p class='giochi'> Larghezza articolo: " . $bastone -> getLarghezza() . "cm</p>";
-echo "<p class='giochi'> Colore articolo: " . $bastone -> getColore() . "cm</p>";
-
+echo "<p class='giochi'> Colore articolo: " . $bastone -> getColore() . "</p>";
 
 ?>
 
