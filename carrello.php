@@ -2,24 +2,8 @@
 
 // include __DIR__ . '/../giochi.php';
 // include __DIR__ . '/../cucce.php';
-// include __DIR__ . '/index.php';
 
-// $user = (!empty($_GET['user'])) ? $_GET['user'] : '';
-// $cardexp = (!empty($_GET['cardexp'])) ? $_GET['cardexp'] : '';
-
-// echo "<p class='order_user'> UserState: $user </p>" ;
-
-// if ($user == 'registered'){
-//   echo "<p class='order_user'> Essendo registrato ha diritto ad uno sconto del 20%";
-// } else if ($user == 'guest'){
-//   echo "<p class='order_user'> Le consigliamo di registrarsi per avere uno sconto del 20% su tutto il catalogo";
-// } else {
-//   echo "<p class='order_user'> Paramentro inserito errato o mancante, si prega di riprovare";
-// }
-
-// echo "<p class='order_card'> CardExpirationDate: $cardexp </p>" ;
-
- //Exception
+//Exception
 //  function cardValidation($cardexp) {
 //   if ($cardexp < 2022) {
 //   throw new Exception('La sua carta è scaduta o non è stata ancora inserita');
@@ -33,22 +17,27 @@
 //   echo 'Eccezione: ' . $e->getMessage();
 //   }
 
+  require __DIR__ . '/trait.php';
 
+  class CreditCard {
 
-  class CreditCard
-{
+    //Trait
+    use UserReg;
+
   public $titolare;
   public $cardexp;
   public $cvv;
   public $codice;
+  public $user;
   
 
   //Costruttore
-  public function __construct($_titolare, $_cardexp, $_cvv, $_codice ){
+  public function __construct($_titolare, $_cardexp, $_cvv, $_codice, $_user ){
     $this -> setTitolare($_titolare);
     $this -> setCardexp($_cardexp);
     $this -> setCvv($_cvv);
     $this -> setCodice($_codice);
+    $this -> setUser($_user);
   }
 
   //setter
@@ -113,7 +102,7 @@
 }
 
 //istanziamo
-$pagamento1 = new CreditCard( 0, 0, 0, 0 );
+$pagamento1 = new CreditCard( 0, 0, 0, 0, 0 );
 
 echo "<h2> Carrello: </h2>";
 
@@ -121,16 +110,7 @@ echo "<p> Nome titolare - " . $pagamento1 -> getTitolare() . "</p>";
 echo "<p> Card Expiration - " . $pagamento1 -> getCardexp() . "</p>";
 echo "<p> Cvv Carta - " . $pagamento1 -> getCvv() . "</p>";
 echo "<p> Codice carta - " . $pagamento1 -> getCodice() . "</p>";
-
-// $dentastix = new CreditCard( 'Dentastix Hills', 5 , 20 , 2023 );
-
-// echo "<h4> Nome articolo - " . $dentastix -> getTitolare() . "</h4>";
-// echo "<p> Card Expiration - " . $dentastix -> getCardexp() . "€</p>";
-// echo "<p> cvv articolo - " . $dentastix -> getCvv() . "gr.</p>";
-// echo "<p> codice articolo - " . $dentastix -> getCodice() . "</p>";
-
-
-
+echo "<p> Stato registrazione - " . $pagamento1 -> getUser() . "</p>";
 
 ?>
 

@@ -58,7 +58,7 @@ echo "<p class='cucce'> Prezzo articolo - " . $castle -> getPrice() . "kg</p>";
 echo "<p class='cucce'> Peso articolo - " . $castle -> getPeso() . "€</p>";
 echo "<p class='cucce'> Lunghezza articolo - " . $castle -> getLunghezza() . "cm</p>";
 echo "<p class='cucce'> Larghezza articolo - " . $castle -> getLarghezza() . "cm</p>";
-echo "<p class='cucce'> Altezza articolo - " . $castle -> getAltezza() . "cm</p>";
+echo "<p class='cucce'> Altezza articolo - " . $castle -> getAltezza() . "cm</p>"; // Ripetizione di codice ma era per usare più volte il trait
 
 $capsule = new Cucce ('capsule', '3', 30 , 150, 60, 70 );
 
@@ -67,7 +67,7 @@ echo "<p class='cucce'> Prezzo articolo - " . $capsule -> getPrice() . "kg</p>";
 echo "<p class='cucce'> Peso articolo - " . $capsule -> getPeso() . "€</p>";
 echo "<p class='cucce'> Lunghezza articolo - " . $capsule -> getLunghezza() . "cm</p>";
 echo "<p class='cucce'> Larghezza articolo - " . $capsule -> getLarghezza() . "cm</p>";
-echo "<p class='cucce'> Altezza articolo - " . $capsule -> getAltezza() . "cm</p>";
+echo "<p class='cucce'> Altezza articolo - " . $capsule -> getAltezza() . "cm</p>"; // Ripetizione di codice ma era per usare più volte il trait
 
 
 ?>
