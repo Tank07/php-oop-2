@@ -8,22 +8,6 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
 
 <?php
 
-//Inserimento parametri carta(scadenza) e user(sconto tramite registrazione) attratersvo metodo GET
-
- //Exception
- function cardValidation($cardexp) {
-  if ($cardexp < 2022) {
-  throw new Exception('La sua carta è scaduta o non è stata ancora inserita');
-  }
-  return $cardexp;
- }
-
- try {
-  echo cardValidation('La sua carta è stata accettata per l\'acquisto');
-  } catch (Exception $e) {
-  echo 'Eccezione: ' . $e->getMessage();
-  }
-
 class Cibo
 {
   public $articolo;

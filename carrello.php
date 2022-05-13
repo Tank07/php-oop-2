@@ -65,36 +65,37 @@
   //Getter
   public function getTitolare(){
     if (strpos($this -> titolare,' ') == 1){
-        echo "<p class='order_card'> Nominativo titolare accettato </p>";
+        echo "<p class='order_ok'> Nominativo titolare accettato </p>";
     } else {
-        echo "<p class='order_card'> Si è pregati di porre uno spazio tra nome e cognome </p>"; //Capire come GET visualizzi lo spazio tra due caratteri
+        echo "<p class='order_error'> Si è pregati di porre uno spazio tra nome e cognome </p>"; //Capire come GET visualizzi lo spazio tra due caratteri
     }
     return $this -> titolare;
   }
 
   public function getCvv(){
     if (is_numeric($this -> cvv) && strlen($this -> cvv) == 3){
-        echo "<p class='order_card'> Codice CVV accettatto </p>";
+        echo "<p class='order_ok'> Codice CVV accettatto </p>";
     } else {
-        echo "<p class='order_card'> Immettere nuovamente il codice, grazie </p>";
+        echo "<p class='order_error'> Immettere nuovamente il codice, grazie </p>";
     }
     return $this -> cvv;
   }
 
+  //Exception
   public function getCardexp(){
-    if ($this -> cardexp > 2022){
-        echo "<p class='order_card'> La sua carta è stata accettata per l'acquisto </p>";
+    if ($this -> cardexp < 2022){
+        throw new Exception('La sua carta è scaduta o non è stata ancora inserita'); // echo "<p class='order_card'> La sua carta è scaduta o non è stata ancora inserita </p>"; 
       } else {
-        echo "<p class='order_card'> La sua carta è scaduta o non è stata ancora inserita </p>";
+        echo "<p class='order_ok'> La sua carta è stata accettata per l'acquisto </p>";
       }   
     return $this -> cardexp;
   }
 
   public function getCodice(){
     if (is_numeric($this -> codice) && strlen($this -> codice) == 12){
-        echo "<p class='order_card'> Codice carta accettatto </p>";
+        echo "<p class='order_ok'> Codice carta accettatto </p>";
     } else {
-        echo "<p class='order_card'> Immettere nuovamente il codice, grazie </p>";
+        echo "<p class='order_error'> Immettere nuovamente il codice, grazie </p>";
     }
     return $this -> codice;
   }
@@ -125,8 +126,11 @@ echo "<p> Stato registrazione - " . $pagamento1 -> getUser() . "</p>";
         .order_user{
             color:purple;
         }
-        .order_card{
-            color:brown;
+        .order_ok{
+            color:green;
+        }
+        .order_error{
+            color:red;
         }
     </style>
 </head>
