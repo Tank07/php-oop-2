@@ -1,23 +1,8 @@
+<!-- Contiene tutto il codice scritto finora, una specie di lista della spesa -->
+
 <?php
 
-// include __DIR__ . '/../giochi.php';
-// include __DIR__ . '/../cucce.php';
-
-//Exception
-//  function cardValidation($cardexp) {
-//   if ($cardexp < 2022) {
-//   throw new Exception('La sua carta è scaduta o non è stata ancora inserita');
-//   }
-//   return $cardexp;
-//  }
-
-//  try {
-//   echo cardValidation('La sua carta è stata accettata per l\'acquisto');
-//   } catch (Exception $e) {
-//   echo 'Eccezione: ' . $e->getMessage();
-//   }
-
-  require __DIR__ . '/trait.php';
+  include __DIR__ . '/giochi.php';
 
   class CreditCard {
 

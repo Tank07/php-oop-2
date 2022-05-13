@@ -1,6 +1,6 @@
 <?php
 
-trait UserReg {
+trait User {
     public $user;
 
     protected function setUser($user){

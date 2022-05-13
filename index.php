@@ -9,26 +9,6 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
 <?php
 
 //Inserimento parametri carta(scadenza) e user(sconto tramite registrazione) attratersvo metodo GET
-$user = (!empty($_GET['user'])) ? $_GET['user'] : '';
-$cardexp = (!empty($_GET['cardexp'])) ? $_GET['cardexp'] : '';
-
-echo "<p class='order_user'> UserState: $user </p>" ;
-
-if ($user == 'registered'){
-  echo "<p class='order_user'> Essendo registrato ha diritto ad uno sconto del 20%";
-} else if ($user == 'guest'){
-  echo "<p class='order_user'> Le consigliamo di registrarsi per avere uno sconto del 20% su tutto il catalogo";
-} else {
-  echo "<p class='order_user'> Paramentro inserito errato o mancante, si prega di riprovare";
-}
-
-echo "<p class='order_card'> CardExpirationDate: $cardexp </p>" ;
-
-if ($cardexp > 2022){
-  echo "<p class='order_card'> La sua carta è stata accettata per l'acquisto </p>";
-} else {
-  echo "<p class='order_card'> La sua carta è scaduta o non è stata ancora inserita </p>";
-}
 
  //Exception
  function cardValidation($cardexp) {

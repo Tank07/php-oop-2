@@ -6,7 +6,7 @@ require __DIR__ . '/../trait.php';
 class Giochi extends Cucce {
 
   //Trait
-  use UserReg;
+  use User;
 
   //proprietà esclusive di giochi
   public $lunghezza;
@@ -42,6 +42,7 @@ class Giochi extends Cucce {
 $palla = new Giochi ('Palla da tennis large con suono', '7', 400 , 10, 10 , 'Verde fluo', 0 );
 
 echo "<h2 class='giochi'> Categoria Giochi: </h2>";
+echo "<p> Stato registrazione - " . $palla -> getUser() . "</p>"; //Ripetizione di codice ma era per riusare il trait
 
 echo "<h4 class='giochi'> Nome articolo - " . $palla -> getArticolo() . "</h4>";
 echo "<p class='giochi'> Prezzo articolo - " . $palla -> getPrice() . "gr</p>";
@@ -49,8 +50,6 @@ echo "<p class='giochi'> Peso articolo - " . $palla -> getPeso() . "€</p>";
 echo "<p class='giochi'> Lunghezza articolo - " . $palla -> getLunghezza() . "cm</p>";
 echo "<p class='giochi'> Larghezza articolo - " . $palla -> getLarghezza() . "cm</p>";
 echo "<p class='giochi'> Colore articolo - " . $palla -> getColore() . "</p>";
-echo "<p> Stato registrazione - " . $palla -> getUser() . "</p>";
-
 
 $bastone = new giochi ('Bastone in gomma', '4', 200 , 50 , 5, 'Marrone', 0 );
 
@@ -60,7 +59,7 @@ echo "<p class='giochi'> Peso articolo - " . $bastone -> getPeso() . "€</p>";
 echo "<p class='giochi'> Lunghezza articolo - " . $bastone -> getLunghezza() . "cm</p>";
 echo "<p class='giochi'> Larghezza articolo - " . $bastone -> getLarghezza() . "cm</p>";
 echo "<p class='giochi'> Colore articolo - " . $bastone -> getColore() . "</p>";
-echo "<p> Stato registrazione - " . $bastone -> getUser() . "</p>";
+
 
 
 ?>
